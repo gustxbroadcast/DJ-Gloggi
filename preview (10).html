@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Privacy Policy for DJ Gloggi, a Streamer.bot utility that manages viewer-requested YouTube videos for The Gustx Broadcast.">
+<title>Privacy Policy — DJ Gloggi</title>
+<style>
+  :root{
+    --booth:#14111a;
+    --panel:#1b1622;
+    --edge:#3a3143;
+    --tungsten:#f2a94b;
+    --cue:#ff4f7d;
+    --silver:#d8d0df;
+    --dim:#9b90a8;
+    --white:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:radial-gradient(circle at top,#211a2b 0,#14111a 42%,#0f0c13 100%);
+    color:var(--silver);
+    font:16px/1.72 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+    padding:48px 20px;
+  }
+  main{max-width:820px;margin:0 auto}
+  .card{
+    background:rgba(27,22,34,.88);
+    border:1px solid var(--edge);
+    border-radius:18px;
+    padding:34px;
+    box-shadow:0 24px 70px rgba(0,0,0,.28);
+  }
+  .eyebrow{
+    display:inline-block;
+    color:var(--tungsten);
+    font-weight:800;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    font-size:12px;
+    margin-bottom:8px;
+  }
+  h1{font-size:34px;line-height:1.2;color:var(--white);margin-bottom:6px}
+  .sub{color:var(--dim);font-size:14px;margin-bottom:26px}
+  .intro{
+    border-left:3px solid var(--cue);
+    background:rgba(255,79,125,.06);
+    padding:15px 17px;
+    border-radius:8px;
+    margin:18px 0 26px;
+  }
+  h2{font-size:20px;line-height:1.3;color:var(--white);margin:30px 0 10px}
+  h3{font-size:16px;line-height:1.3;color:var(--tungsten);margin:19px 0 7px}
+  p{margin-bottom:13px}
+  ul{margin:0 0 14px 22px}
+  li{margin-bottom:8px}
+  code{
+    background:#0e0b11;
+    border:1px solid var(--edge);
+    border-radius:5px;
+    padding:2px 6px;
+    color:#ffd1dd;
+    overflow-wrap:anywhere;
+  }
+  a{color:#ff82a2;text-decoration-thickness:1px;text-underline-offset:3px}
+  a:hover{color:#ffabc0}
+  .table-wrap{overflow-x:auto;margin:13px 0 18px}
+  table{width:100%;border-collapse:collapse;min-width:610px}
+  th,td{border:1px solid var(--edge);padding:12px 13px;text-align:left;vertical-align:top}
+  th{background:#201927;color:var(--white);font-size:13px}
+  td{background:rgba(10,8,12,.24)}
+  .important{
+    margin:18px 0;
+    padding:16px 18px;
+    border:1px solid rgba(242,169,75,.45);
+    background:rgba(242,169,75,.07);
+    border-radius:10px;
+  }
+  nav{
+    margin:18px 0 8px;
+    padding:14px 16px;
+    border:1px solid var(--edge);
+    border-radius:10px;
+    background:rgba(0,0,0,.14);
+  }
+  nav a{display:inline-block;margin:3px 14px 3px 0;font-size:14px}
+  footer{margin-top:36px;padding-top:20px;border-top:1px solid var(--edge);font-size:13px;color:var(--dim)}
+  @media (max-width:650px){body{padding:22px 12px}.card{padding:24px 18px}h1{font-size:29px}}
+</style>
+</head>
+<body>
+<main>
+  <div class="card">
+    <div class="eyebrow">DJ Gloggi • The Gustx Broadcast</div>
+    <h1>Privacy Policy</h1>
+    <p class="sub">Effective and last updated: September 10, 2026</p>
+
+    <div class="intro">
+      <p><strong>DJ Gloggi</strong> ("DJ Gloggi," "the app," "we," or "our") is a livestream utility used with Streamer.bot for The Gustx Broadcast. It lets livestream viewers submit YouTube video links through chat, validates those requests, adds accepted videos to a designated YouTube playlist controlled by the authenticated channel owner, and displays the current request and queue in an on-stream DJ overlay.</p>
+      <p>This policy explains what information DJ Gloggi accesses, how that information is used, where it is stored, when it is deleted, and the choices available to users.</p>
+    </div>
+
+    <nav aria-label="Privacy policy sections">
+      <a href="#google-data">Google user data</a>
+      <a href="#chat-data">Chat/request data</a>
+      <a href="#sharing">Sharing</a>
+      <a href="#security">Security</a>
+      <a href="#retention">Retention &amp; deletion</a>
+      <a href="#choices">Your choices</a>
+    </nav>
+
+    <h2 id="google-data">1. Google and YouTube user data DJ Gloggi accesses</h2>
+    <p>DJ Gloggi uses OAuth 2.0 and the YouTube Data API v3. The app requests the Google OAuth scope <code>https://www.googleapis.com/auth/youtube.force-ssl</code>. Google classifies this as a sensitive scope. The scope is used because YouTube requires an authorized YouTube scope to insert a video into a playlist.</p>
+
+    <p>Although Google's user-facing description for this scope is broad, DJ Gloggi's implementation uses that authorization only for the limited functions described below.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Google/YouTube data or authorization</th><th>How DJ Gloggi uses it</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>OAuth access token</td><td>Authenticates authorized requests from Streamer.bot to the YouTube Data API.</td></tr>
+          <tr><td>OAuth refresh token</td><td>Obtains a replacement access token after the short-lived access token expires, so the channel owner does not need to sign in before each playlist request.</td></tr>
+          <tr><td>Designated YouTube playlist ID</td><td>Identifies the playlist selected by the channel owner as the destination for accepted DJ requests.</td></tr>
+          <tr><td>YouTube video ID and video metadata</td><td>DJ Gloggi checks the submitted video and reads the video's title, channel name, thumbnail, duration, live-status information, and embed availability so it can validate the request and display it in the overlay.</td></tr>
+          <tr><td>Playlist write authorization</td><td>After a request passes the app's validation rules, DJ Gloggi uses YouTube's playlist API to add that video to the designated playlist.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Google data DJ Gloggi does not intentionally access or use</h3>
+    <p>DJ Gloggi does not use the granted authorization to read or manage the authenticated user's Gmail, Google Drive, Contacts, Calendar, Google Account password, YouTube watch history, subscriptions, comments, ratings, captions, uploads, or unrelated playlists. It does not upload videos, edit video metadata, delete videos, manage comments, or manage subscriptions.</p>
+
+    <p>Livestream viewers do not authenticate a Google account with DJ Gloggi. A viewer submits a YouTube link through livestream chat; the Google OAuth authorization belongs to the broadcaster/channel owner operating DJ Gloggi.</p>
+
+    <h2 id="chat-data">2. Livestream chat and song-request data</h2>
+    <p>When a viewer uses the DJ request command, DJ Gloggi may process and temporarily store the following information:</p>
+    <ul>
+      <li>the viewer's public chat display name or username;</li>
+      <li>the chat platform from which the request originated;</li>
+      <li>the submitted YouTube URL or video ID;</li>
+      <li>the time the request was made;</li>
+      <li>the corresponding YouTube title, channel name, thumbnail URL, and duration; and</li>
+      <li>the request's position in the current DJ queue.</li>
+    </ul>
+    <p>This information is used to operate the request queue, prevent duplicate or excessive requests, acknowledge requests in chat, and show the song and requester in the livestream overlay. DJ Gloggi does not intentionally collect viewers' email addresses, Google Account credentials, IP addresses, payment information, or private message history through the <code>!dj</code> request feature.</p>
+
+    <h2>3. How Google user data is used</h2>
+    <p>Google user data and OAuth authorization are used only to provide the user-facing DJ Gloggi functionality requested by the authenticated channel owner: validating YouTube video requests, obtaining the metadata necessary to identify and display those videos, and adding accepted videos to the channel owner's designated YouTube playlist.</p>
+    <p>DJ Gloggi does not use Google user data for advertising, targeted advertising, retargeting, credit decisions, data brokerage, profiling unrelated to the DJ feature, or training generalized artificial-intelligence or machine-learning models.</p>
+
+    <h2 id="sharing">4. Sharing, transfer, and disclosure</h2>
+    <p>DJ Gloggi does not sell Google user data or viewer request data. It does not provide Google user data to advertisers, data brokers, information resellers, or unrelated third parties.</p>
+    <p>Google OAuth credentials and authorized API requests are transmitted to Google only as necessary to authenticate with Google's OAuth service and use the YouTube Data API. YouTube videos and thumbnails displayed by the overlay are loaded from YouTube/Google services in the normal operation of the embedded player and artwork display.</p>
+    <p>DJ Gloggi does not operate a separate remote database or cloud backend for the queue. The active DJ state and credentials used by the Streamer.bot integration are maintained on the broadcaster's local computer.</p>
+
+    <h2 id="security">5. Data storage and security</h2>
+    <p>DJ Gloggi is designed as a locally operated Streamer.bot integration. OAuth client configuration, the refresh token, the current access token, the playlist ID, and the active DJ queue are stored locally in Streamer.bot's persistent data on the broadcaster's computer.</p>
+    <ul>
+      <li>OAuth tokens are sent only to Google's OAuth and YouTube API endpoints when needed for authentication and API operations.</li>
+      <li>Communication with Google OAuth and YouTube API endpoints uses HTTPS.</li>
+      <li>The livestream overlay communicates with Streamer.bot through the broadcaster's local Streamer.bot connection rather than a DJ Gloggi-operated cloud database.</li>
+      <li>The DJ Gloggi website does not intentionally add advertising trackers or analytics scripts.</li>
+    </ul>
+    <p>No method of local storage or electronic transmission can be guaranteed to be absolutely secure. The broadcaster is responsible for securing the computer, Streamer.bot installation, Google Cloud OAuth client credentials, and associated Google account.</p>
+
+    <h2 id="retention">6. Data retention and deletion</h2>
+    <h3>OAuth credentials</h3>
+    <p>The OAuth refresh token is retained locally for as long as the broadcaster keeps DJ Gloggi connected to the Google account. Short-lived access tokens are replaced as needed. The broadcaster can delete the locally stored OAuth values from Streamer.bot and can revoke DJ Gloggi's Google access at any time through Google Account permissions.</p>
+
+    <h3>DJ queue and viewer request information</h3>
+    <p>DJ Gloggi's persistent queue contains only the currently playing request and requests waiting to play; it is not designed as a permanent viewer-request history. A completed track is removed from the active queue when playback advances. Remaining queue information persists locally across Streamer.bot restarts until those requests play, the queue is cleared, or the stored DJ state is removed by the broadcaster.</p>
+
+    <h3>Deletion requests</h3>
+    <p>A viewer who wants an active request associated with their username removed may contact the broadcaster through The Gustx Broadcast's published contact channel or during the livestream and ask for the request to be removed/cleared. The broadcaster can clear the active DJ state from Streamer.bot. Google account authorization can be revoked independently using Google's account-permissions page linked below.</p>
+
+    <h2 id="choices">7. User choices and revoking Google access</h2>
+    <p>The broadcaster may stop using DJ Gloggi at any time. Google authorization can be revoked from <a href="https://myaccount.google.com/permissions" rel="noopener noreferrer">Google Account → Third-party apps &amp; services</a>. After authorization is revoked, DJ Gloggi can no longer obtain valid OAuth access tokens for playlist operations unless the broadcaster authorizes the app again.</p>
+    <p>Viewers may choose not to use the <code>!dj</code> command. Not using the command does not prevent a viewer from otherwise participating in the livestream chat.</p>
+
+    <h2>8. Google API Services User Data Policy / Limited Use</h2>
+    <div class="important">
+      <p>DJ Gloggi's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener noreferrer">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+    </div>
+
+    <h2>9. YouTube and third-party services</h2>
+    <p>DJ Gloggi uses YouTube and the YouTube Data API. Use of YouTube is also subject to the <a href="https://www.youtube.com/t/terms" rel="noopener noreferrer">YouTube Terms of Service</a> and <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google Privacy Policy</a>. Livestream chat platforms and Streamer.bot operate under their own terms and privacy practices.</p>
+
+    <h2>10. Children's privacy</h2>
+    <p>DJ Gloggi is not designed to knowingly collect personal information from children. The <code>!dj</code> feature processes only the limited public chat/request information described above. If information is believed to have been submitted by a child in a way that should be removed, the broadcaster may clear the applicable active request data.</p>
+
+    <h2>11. Changes to this policy</h2>
+    <p>This policy may be updated if DJ Gloggi's features or data practices change. The "Effective and last updated" date at the top of this page will be revised when material changes are published. DJ Gloggi's use of Google user data will remain limited to practices disclosed in the current published privacy policy.</p>
+
+    <h2>12. Contact</h2>
+    <p>Privacy questions or deletion requests may be directed to the operator of The Gustx Broadcast using the public contact information associated with DJ Gloggi.</p>
+    <p><strong>Before submitting this policy to Google:</strong> replace this sentence with the same contact email address you entered as the Google Cloud project's Developer contact information. Example: <code>Privacy contact: your-email@example.com</code></p>
+
+    <footer>
+      <p>DJ Gloggi • The Gustx Broadcast</p>
+      <p><a href="./index.html">Back to DJ Gloggi</a></p>
+    </footer>
+  </div>
+</main>
+</body>
+</html>
