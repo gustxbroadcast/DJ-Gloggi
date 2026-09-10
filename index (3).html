@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DJ Gloggi</title>
+<style>
+  :root{--booth:#14111a;--panel:#221c29;--edge:#3a3143;--tungsten:#f2a94b;--cue:#ff4f7d;--silver:#cbc2d2;--dim:#7d7389}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--booth);color:var(--silver);font:16px/1.65 ui-sans-serif,system-ui,sans-serif;padding:48px 20px}
+  main{max-width:640px;margin:0 auto}
+  h1{font-size:32px;letter-spacing:-.01em;color:#fff;margin-bottom:6px}
+  .sub{color:var(--tungsten);font-size:13px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:28px}
+  h2{font-size:17px;color:#fff;margin:28px 0 8px}
+  p{margin-bottom:12px}
+  ul{margin:0 0 12px 20px}
+  li{margin-bottom:6px}
+  a{color:var(--cue)}
+  footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--edge);font-size:13px;color:var(--dim)}
+</style>
+</head>
+<body>
+<main>
+  <p class="sub">Twitch stream tool</p>
+  <h1>DJ Gloggi</h1>
+  <p>DJ Gloggi is a music request bot for my Twitch stream. Viewers type <code>!dj</code> with a YouTube link in chat, and the track is added to a playlist that plays during the broadcast.</p>
+
+  <h2>How it works</h2>
+  <ul>
+    <li>A viewer posts a YouTube link in chat.</li>
+    <li>The bot checks the video's length and availability.</li>
+    <li>If it passes, the video is added to a YouTube playlist owned by the streamer.</li>
+    <li>An on-screen overlay shows what's playing and who requested it.</li>
+  </ul>
+
+  <h2>Who uses it</h2>
+  <p>This app is used by one person — me, the streamer — to manage my own YouTube playlist. It is not offered as a service to anyone else and does not access any viewer's Google account.</p>
+
+  <h2>Links</h2>
+  <p><a href="./privacy.html">Privacy policy</a> &nbsp;·&nbsp; <a href="./terms.html">Terms of service</a></p>
+
+  <footer>Questions: <a href="mailto:YOUR-EMAIL@example.com">YOUR-EMAIL@example.com</a></footer>
+</main>
+</body>
+</html>
